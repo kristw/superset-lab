@@ -1,5 +1,5 @@
-import React from '../../../../../../Library/Caches/typescript/2.9/node_modules/@types/react';
-import PropTypes from '../../../../../../Library/Caches/typescript/2.9/node_modules/@types/prop-types';
+import React from 'react';
+import PropTypes from 'prop-types';
 import Registry from '../Registry';
 
 const propTypes = {
@@ -13,13 +13,40 @@ const defaultProps = {
 const registry = new Registry();
 
 class SuperChart extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { Renderer: null };
+  }
+
+  componentDidMount() {
+    this.loadChartType(this.props.type);
+  }
+
+  componentWillReceiveProps(nextProps) {
+    if(nextProps.type !== this.props.type) {
+      this.loadChartType(nextProps.type);
+    }
+  }
+
+  loadChartType(type) {
+    this.setState({ Renderer: null });
+    const chartType = registry.get(type);
+    if(chartType) {
+      chartType.load().then(Renderer => {
+        this.setState({ Renderer });
+      });
+    }
+  }
+
   render() {
-    const { className } = this.props;
-    return (
-      <div className={className}>
-        under construction
-      </div>
-    );
+    const { className, id } = this.props;
+    const { Renderer } = this.state;
+
+    if(Renderer) {
+      return <Renderer {...this.props} />
+    } else {
+      return <div id={id} className={className} />;
+    }
   }
 }
 

@@ -8,7 +8,7 @@ const defaultProps = {
   className: '',
 };
 
-class VisNumber extends React.Component {
+class ChartJson extends React.Component {
   render() {
     const { className, data, settings } = this.props;
     return (
@@ -20,7 +20,7 @@ class VisNumber extends React.Component {
   }
 }
 
-VisNumber.propTypes = propTypes;
-VisNumber.defaultProps = defaultProps;
+ChartJson.propTypes = propTypes;
+ChartJson.defaultProps = defaultProps;
 
-export default VisNumber;
+export default ChartJson;
