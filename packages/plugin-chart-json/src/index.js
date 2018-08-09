@@ -1,4 +1,4 @@
-import { Plugin, SuperChart } from ‘@superset/core’;
+import { Plugin, SuperChart } from ‘@kristw-lab-superset/core’;
 
 export default class PluginChartJson extends Plugin {
   constructor(){

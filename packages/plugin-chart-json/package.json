@@ -1,5 +1,5 @@
 {
-  "name": "@superset/plugin-chart-json",
+  "name": "@kristw-lab-superset/plugin-chart-json",
   "version": "0.0.0",
   "description": "",
   "main": "src/index.js",

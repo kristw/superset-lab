@@ -3,9 +3,13 @@ import PropTypes from 'prop-types';
 
 const propTypes = {
   className: PropTypes.string,
+  data: PropTypes.object,
+  settings: PropTypes.object,
 };
 const defaultProps = {
   className: '',
+  data: {},
+  settings: {},
 };
 
 class ChartJson extends React.Component {

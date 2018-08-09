@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Registry from '../Registry';
+import Registry from '../platform/Registry';
 
 const propTypes = {
   className: PropTypes.string,
