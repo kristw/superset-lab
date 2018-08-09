@@ -1,10 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Registry from '../platform/Registry';
+import InvalidChart from './InvalidChart';
 
 const propTypes = {
   className: PropTypes.string,
   type: PropTypes.string.isRequired,
+  input: PropTypes.object,
 };
 const defaultProps = {
   className: '',
@@ -36,17 +38,23 @@ class SuperChart extends React.PureComponent {
       chartType.load().then(Renderer => {
         this.setState({ Renderer });
       });
+    } else {
+      this.setState({ Renderer: InvalidChart })
     }
   }
 
   render() {
-    const { className, id } = this.props;
+    const { className, id, input } = this.props;
     const { Renderer } = this.state;
 
     if(Renderer) {
-      return <Renderer {...this.props} />
+      return (
+        <Renderer input={input} />
+      );
     } else {
-      return <div id={id} className={className} />;
+      return (
+        <div id={id} className={className} />
+      );
     }
   }
 }
