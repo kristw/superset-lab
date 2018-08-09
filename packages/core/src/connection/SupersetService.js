@@ -1,11 +1,30 @@
-export function get() {
+export default class SupersetClient {
+  get() {
 
+  }
+
+  post() {
+
+  }
+
+  put() {
+
+  }
+
+  destroy() {
+
+  }
 }
 
-export function post() {
+let client;
 
+SupersetClient.getInstance = function() {
+  if (!client) {
+    client = new SupersetClient();
+  }
+  return client;
 }
 
-export function put() {
-
+export function configure(config) {
+  client = new SupersetClient(config);
 }

@@ -11,7 +11,3 @@ export default class Registry {
     return this.items[key];
   }
 }
-
-export function makeRegisterable(target) {
-  target.registry = new Registry();
-}

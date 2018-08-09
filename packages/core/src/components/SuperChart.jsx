@@ -12,7 +12,7 @@ const defaultProps = {
 
 const registry = new Registry();
 
-class SuperChart extends React.Component {
+class SuperChart extends React.PureComponent {
   constructor(props) {
     super(props);
     this.state = { Renderer: null };
@@ -29,6 +29,7 @@ class SuperChart extends React.Component {
   }
 
   loadChartType(type) {
+    // Clear renderer
     this.setState({ Renderer: null });
     const chartType = registry.get(type);
     if(chartType) {
