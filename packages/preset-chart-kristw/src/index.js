@@ -1,5 +1,5 @@
-import pluginChartDebugger from ‘@kristw-lab-superset/plugin-chart-debugger’;
+import Scatterplot from ‘@kristw-lab-superset/plugin-chart-scatterplot’;
 
 export default {
-  plugins: [pluginChartDebugger]
+  plugins: [Scatterplot]
 };

@@ -1,0 +1,21 @@
+{
+  "name": "@kristw-lab-superset/plugin-chart-scatterplot",
+  "version": "0.0.0",
+  "description": "",
+  "main": "dist/bundle.min.js",
+  "scripts": {
+    "build": "rm -rf dist && NODE_ENV=production ./node_modules/lazynerd-devtools/build --config webpack.config.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "peerDependencies": {
+    "react": "^16.4.2"
+  },
+  "dependencies": {
+    "lazynerd-devtools": "^1.0.1",
+    "prop-types": "^15.6.2"
+  },
+  "devDependencies": {
+    "react": "^16.4.2"
+  }
+}
