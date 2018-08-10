@@ -44,12 +44,12 @@ class SuperChart extends React.PureComponent {
   }
 
   render() {
-    const { className, id, input } = this.props;
+    const { className, id } = this.props;
     const { Renderer } = this.state;
 
     if(Renderer) {
       return (
-        <Renderer input={input} />
+        <Renderer {...this.props} />
       );
     } else {
       return (
