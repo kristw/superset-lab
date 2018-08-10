@@ -1,7 +1,11 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import { configure, SuperChart } from '@kristw-lab-superset/core';
+import JsonChartPlugin from '@kristw-lab-superset/plugin-chart-json';
+
+configure({
+  plugins: [JsonChartPlugin],
+});
 
 class App extends Component {
   render() {

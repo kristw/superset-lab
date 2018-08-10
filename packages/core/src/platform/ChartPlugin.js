@@ -2,15 +2,12 @@ import Plugin from './Plugin';
 import SuperChart from '../components/SuperChart';
 
 export default class ChartPlugin extends Plugin {
-  constructor(name, loadFn) {
+  constructor(name, load) {
     super(name);
-    this.loadFn = load;
+    this.load = load;
   }
 
   install(name) {
-    SuperChart.registry.add({
-      name: name || this.name,
-      load: this.loadFn,
-    });
+    SuperChart.registry.add(this.name, this);
   }
 }

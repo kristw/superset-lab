@@ -8,9 +8,10 @@ export default class Preset {
   }
 
   expandPlugins() {
-    const plugins = {};
+    const allPlugins = {};
     const addPlugin = plugin => {
-      plugins[`${this.namespace}${plugin.name}`] = plugin;
+      const key = `${this.namespace}${plugin.name}`;
+      allPlugins[key] = plugin;
     }
     this.presets
       .map(preset => preset.expandPlugins())
@@ -18,12 +19,14 @@ export default class Preset {
         plugins.forEach(addPlugin);
       });
     this.plugins.forEach(addPlugin);
-    return plugins;
+    return allPlugins;
   }
 
   install() {
-    const plugins = this.expandPlugins();
-    Object.keys(this.plugins)
-      .forEach(key => { plugins[key].install(key) });
+    const allPlugins = this.expandPlugins();
+    Object.keys(allPlugins)
+      .forEach(key => {
+        allPlugins[key].install(key);
+      });
   }
 }

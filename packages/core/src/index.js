@@ -6,12 +6,16 @@ export { default as Preset } from './platform/Preset.js';
 export { default as ChartPlugin } from './platform/ChartPlugin.js';
 export { default as SuperChart } from './components/SuperChart.jsx';
 
-export function configure(config) {
-  if(config.connection) {
-    configureConnection(config.connection);
+export function configure({
+  name='app',
+  connection,
+  presets,
+  plugins
+}) {
+  if(connection) {
+    configureConnection(connection);
   }
-  const { presets, plugins } = config;
   if(presets || plugins) {
-    configurePlatform({ presets, plugins });
+    configurePlatform({ name, presets, plugins });
   }
 }

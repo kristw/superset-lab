@@ -1,7 +1,4 @@
 import { ChartPlugin } from '@kristw-lab-superset/core';
 
-export default class JsonChartPlugin extends ChartPlugin {
-  constructor(){
-    super('json', () => import('./JsonChart.jsx'));
-  }
-}
+const plugin = new ChartPlugin('json', () => import('./JsonChart.jsx'));
+export default plugin;

@@ -14,6 +14,12 @@ const commonConfig = {
     umdNamedDefine: false
   },
   externals: {
+    '@kristw-lab-superset/core': {
+      root: 'SupersetCore',
+      commonjs2: '@kristw-lab-superset/core',
+      commonjs: '@kristw-lab-superset/core',
+      amd: '@kristw-lab-superset/core'
+    },
     'prop-types': {
       root: 'PropTypes',
       commonjs2: 'prop-types',
