@@ -12,7 +12,7 @@ const defaultProps = {
   settings: {},
 };
 
-class ChartJson extends React.Component {
+class JsonChart extends React.PureComponent {
   render() {
     const { className, data, settings } = this.props;
     return (
@@ -24,7 +24,7 @@ class ChartJson extends React.Component {
   }
 }
 
-ChartJson.propTypes = propTypes;
-ChartJson.defaultProps = defaultProps;
+JsonChart.propTypes = propTypes;
+JsonChart.defaultProps = defaultProps;
 
-export default ChartJson;
+export default JsonChart;
