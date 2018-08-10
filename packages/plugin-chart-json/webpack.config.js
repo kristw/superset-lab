@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require('webpack');
 const merge = require('webpack-merge');
 
 const commonConfig = {
@@ -32,7 +33,12 @@ const commonConfig = {
       commonjs: 'react',
       amd: 'react'
     }
-  }
+  },
+  plugins: [
+    new webpack.optimize.LimitChunkCountPlugin({
+      maxChunks: 1,
+    }),
+  ],
 };
 
 let config;

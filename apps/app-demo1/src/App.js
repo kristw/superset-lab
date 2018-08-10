@@ -14,6 +14,7 @@ class App extends Component {
         <h1>Test Plugin</h1>
         <p className="App-intro">
           <SuperChart type="abc" />
+          <hr/>
           <SuperChart type="json" />
         </p>
       </div>

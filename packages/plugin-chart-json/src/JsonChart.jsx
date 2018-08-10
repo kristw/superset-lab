@@ -14,9 +14,10 @@ const defaultProps = {
 
 class JsonChart extends React.PureComponent {
   render() {
-    const { className, data, settings } = this.props;
+    const { id, className, type, data, settings } = this.props;
     return (
-      <div className={className}>
+      <div id={id} className={className}>
+        <div>type: {type}</div>
         <div>data: {JSON.stringify(data)}</div>
         <div>settings: {JSON.stringify(settings)}</div>
       </div>
