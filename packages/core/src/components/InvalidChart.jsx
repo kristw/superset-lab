@@ -14,8 +14,11 @@ class InvalidChart extends React.Component {
     const { className, type } = this.props;
     return (
       <div className={className}>
-        Unknown chart type: <code>{type}</code>.
-        Please make sure the chart type was properly registered.
+        <div class="alert alert-warning" role="alert">
+          Unknown chart type: <code>{type}</code>.
+          Please make sure to import and register the plugin for this chart
+          (e.g. <code>plugin-chart-{type}</code>).
+        </div>
       </div>
     );
   }

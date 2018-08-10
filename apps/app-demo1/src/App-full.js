@@ -1,6 +1,15 @@
 import React, { Component } from 'react';
 import './App.css';
-import { SuperChart } from '@kristw-lab-superset/core';
+import { configure, SuperChart } from '@kristw-lab-superset/core';
+import DebuggerChartPlugin from '@kristw-lab-superset/plugin-chart-debugger';
+import ScatterplotChartPlugin from '@kristw-lab-superset/plugin-chart-scatterplot';
+
+configure({
+  plugins: [
+    DebuggerChartPlugin,
+    ScatterplotChartPlugin
+  ],
+});
 
 class App extends Component {
   render() {
@@ -8,12 +17,12 @@ class App extends Component {
       <div className="App">
         <h1>Example of Chart usage with the plugin system.</h1>
         <p>
-          This page uses <code>&lt;SuperChart&gt;</code> to render data.
+          This page uses <code>SuperChart</code> to render data.
           The available chart types are registered by the developers.
         </p>
-        <div className="App-intro">
+        <p className="App-intro">
           <hr/>
-          This is the "abc" chart.
+          This is the "abc" chart, which is not registered.
           <SuperChart type="abc" />
           <hr/>
           This is the "debugger" chart type, which just print out <code>props</code>
@@ -28,7 +37,7 @@ class App extends Component {
             type="scatterplot"
             data={[{x:1, y:2}, {x:2, y:3}]}
           />
-        </div>
+        </p>
       </div>
     );
   }
