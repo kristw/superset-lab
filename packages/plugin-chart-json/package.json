@@ -2,9 +2,9 @@
   "name": "@kristw-lab-superset/plugin-chart-json",
   "version": "0.0.0",
   "description": "",
-  "main": "src/index.js",
+  "main": "dist/bundle.min.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "rm -rf dist && NODE_ENV=production ./node_modules/lazynerd-devtools/build --config webpack.config.js"
   },
   "author": "",
   "license": "ISC",
@@ -12,6 +12,7 @@
     "react": "^16.4.2"
   },
   "dependencies": {
+    "lazynerd-devtools": "^1.0.1",
     "prop-types": "^15.6.2"
   },
   "devDependencies": {
