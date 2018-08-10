@@ -9,6 +9,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@kristw-lab-superset/plugin-chart-json": "0.0.0"
+    "@kristw-lab-superset/plugin-chart-debugger": "0.0.0"
   }
 }

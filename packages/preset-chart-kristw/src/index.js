@@ -1,5 +1,5 @@
-import pluginChartJson from ‘@kristw-lab-superset/plugin-chart-json’;
+import pluginChartDebugger from ‘@kristw-lab-superset/plugin-chart-debugger’;
 
 export default {
-  plugins: [pluginChartJson]
+  plugins: [pluginChartDebugger]
 };
