@@ -15,7 +15,11 @@ class App extends Component {
         <p className="App-intro">
           <SuperChart type="abc" />
           <hr/>
-          <SuperChart type="json" />
+          <SuperChart
+            type="json"
+            data={{a:1, b:2}}
+            settings={{splitBy: 'country'}}
+          />
         </p>
       </div>
     );

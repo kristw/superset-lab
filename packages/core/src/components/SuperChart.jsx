@@ -33,7 +33,6 @@ class SuperChart extends React.PureComponent {
     // Clear renderer
     this.setState({ Renderer: null });
     const chartType = registry.get(type);
-    console.log('chartType', type, chartType);
     if(chartType) {
       chartType.load().then(Renderer => {
         this.setState({ Renderer });
