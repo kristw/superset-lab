@@ -10,7 +10,7 @@ const commonConfig = {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.min.js',
     sourceMapFilename: '[file].map',
-    library: 'SupersetPluginChartJson',
+    library: 'SupersetPluginChartDebugger',
     libraryTarget: 'umd',
     umdNamedDefine: false
   },

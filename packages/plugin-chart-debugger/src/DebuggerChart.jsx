@@ -12,7 +12,7 @@ const defaultProps = {
   settings: {},
 };
 
-class JsonChart extends React.PureComponent {
+class DebuggerChart extends React.PureComponent {
   render() {
     const { id, className, ...otherProps } = this.props;
     return (
@@ -27,7 +27,7 @@ class JsonChart extends React.PureComponent {
   }
 }
 
-JsonChart.propTypes = propTypes;
-JsonChart.defaultProps = defaultProps;
+DebuggerChart.propTypes = propTypes;
+DebuggerChart.defaultProps = defaultProps;
 
-export default JsonChart;
+export default DebuggerChart;

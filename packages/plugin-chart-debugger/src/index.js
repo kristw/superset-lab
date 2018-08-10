@@ -3,14 +3,14 @@ import { ChartPlugin } from '@kristw-lab-superset/core';
 // // Lazy load code
 // // Need to fix some webpack settings
 // const plugin = new ChartPlugin(
-//   'json',
-//   () => import('./JsonChart.jsx'),
+//   'debugger',
+//   () => import('./DebuggerChart.jsx'),
 // );
 // export default plugin;
 
-import JsonChart from './JsonChart';
+import DebuggerChart from './DebuggerChart';
 const plugin = new ChartPlugin(
-  'json',
-  () => Promise.resolve(JsonChart),
+  'debugger',
+  () => Promise.resolve(DebuggerChart),
 );
 export default plugin;

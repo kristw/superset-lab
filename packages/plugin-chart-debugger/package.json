@@ -1,5 +1,5 @@
 {
-  "name": "@kristw-lab-superset/plugin-chart-json",
+  "name": "@kristw-lab-superset/plugin-chart-debugger",
   "version": "0.0.0",
   "description": "",
   "main": "dist/bundle.min.js",

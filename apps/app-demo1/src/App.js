@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import './App.css';
 import { configure, SuperChart } from '@kristw-lab-superset/core';
-import JsonChartPlugin from '@kristw-lab-superset/plugin-chart-json';
+import DebuggerChartPlugin from '@kristw-lab-superset/plugin-chart-debugger';
 
 configure({
-  plugins: [JsonChartPlugin],
+  plugins: [DebuggerChartPlugin],
 });
 
 class App extends Component {
@@ -16,7 +16,7 @@ class App extends Component {
           <SuperChart type="abc" />
           <hr/>
           <SuperChart
-            type="json"
+            type="debugger"
             data={{a:1, b:2}}
             settings={{splitBy: 'country'}}
           />
